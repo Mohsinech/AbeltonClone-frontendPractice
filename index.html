@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn more about ableton — Frontend Practice</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="svg" href="./src/images/logo.svg" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <!-- 
+    This is just a popup contains some infos 
+    you can delete after reviewing this project
+    -->
+    <div class="popup_info">
+      <div class="exit_btn" id="exit">
+        <img class="exit" src="./src/images/x.svg" />
+      </div>
+      <h2 class="gr">
+        Hello Programmer! This is a clone of the
+        <span
+          ><a
+            href="https://www.ableton.com/en/about/"
+            target="_blank"
+            class="off_site"
+            >Ableton.com</a
+          ></span
+        >
+        site and coded by
+        <span
+          ><a
+            class="ig"
+            href="https://www.instagram.com/muhsench/"
+            target="_blank"
+            >@muhsench.</a
+          ></span
+        >
+      </h2>
+    </div>
+    <!-- Main heading-->
+    <header class="header">
+      <ul class="header_list">
+        <a href="about.html" class="items">
+          <svg
+            role="img"
+            aria-label="Logo Ableton"
+            class="main_logo"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            width="45"
+            height="21"
+            viewBox="0 0 45 21"
+          >
+            <path
+              d="M0 0h3v21H0zM6 0h3v21H6zM12
+    0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z"
+            ></path>
+          </svg>
+        </a>
+        <span class="menu" id="menu">Menu</span>
+
+        <!--Mobile navbar-->
+        <div class="mobile_navbar" id="nav_overlay">
+          <div class="mobile_nav_logo">
+            <a href="about.html" class="items">
+              <svg
+                role="img"
+                aria-label="Logo Ableton"
+                class="main_logo_overlay"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                width="45"
+                height="21"
+                viewBox="0 0 45 21"
+              >
+                <path
+                  d="M0 0h3v21H0zM6 0h3v21H6zM12
+    0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="mobile_nav_list">
+            <ul class="mobile_list_item">
+              <li class="mobile_list"><a href="#">Live</a></li>
+              <li class="mobile_list"><a href="#">Push</a></li>
+              <li class="mobile_list"><a href="#">Note</a></li>
+              <li class="mobile_list"><a href="#">Link</a></li>
+              <li class="mobile_list"><a href="#">Shop</a></li>
+              <li class="mobile_list"><a href="#">Packs</a></li>
+              <li class="mobile_list"><a href="#">Help</a></li>
+              <li class="mobile_list"><a href="#">More</a></li>
+            </ul>
+            <ul class="mobile_list_item_ii">
+              <li class="mobile_list_label">
+                <a href="#">Try Live 12 for free</a>
+              </li>
+              <li class="mobile_list_sub">Log in or register</li>
+              <li class="mobile_list_label">
+                <a href="#">More on Ableton.com:</a>
+              </li>
+              <li class="mobile_list_sub">Blog</li>
+              <li class="mobile_list_sub">Abelton for the Classroom</li>
+              <li class="mobile_list_sub">
+                Abelton for Colleges and Universities
+              </li>
+              <li class="mobile_list_sub">Certified Training</li>
+              <li class="mobile_list_sub orange">About Ableton</li>
+              <li class="mobile_list_sub">Jobs</li>
+              <li class="mobile_list_sub">Apprenticeships</li>
+            </ul>
+          </div>
+          <div class="mobile_slider">
+            <h2 class="mobile_list_label">More from Ableton:</h2>
+            <div class="wrapper">
+              <div class="text_box">
+                <span class="text_label">Loop</span>
+                <p class="text_subtitle">
+                  Watch Talks, Performances and Features from Ableton's Summit
+                  for Music Makers.
+                </p>
+              </div>
+              <div class="text_box">
+                <span class="text_label">Learning Music</span>
+                <p class="text_subtitle">
+                  Learn the fundamentals of music making right in your browser.
+                </p>
+              </div>
+              <div class="text_box">
+                <span class="text_label">Learning Synths</span>
+                <p class="text_subtitle">
+                  Get started with synthesis using a web-based synth and
+                  accompanying lessons.
+                </p>
+              </div>
+              <div class="text_box">
+                <span class="text_label">Making Music</span>
+                <p class="text_subtitle">
+                  Some tips from 74 Creative Strategies for Electronic
+                  Producers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Mobile navbar -->
+
+        <li class="list_items">
+          <a href="#" class="items">Live</a>
+        </li>
+        <li class="list_items">
+          <a href="#" class="items">Push</a>
+        </li>
+        <li class="list_items">
+          <a href="#" class="items">Note</a>
+        </li>
+        <li class="list_items">
+          <a href="#" class="items">Link</a>
+        </li>
+        <li class="list_items">
+          <a href="#" class="items">Shop</a>
+        </li>
+        <li class="list_items">
+          <a href="#" class="items">Packs</a>
+        </li>
+        <li class="list_items">
+          <a href="#" class="items">Help</a>
+        </li>
+        <div class="icon_list" onclick="openMoreMenu()">
+          <li class="list_items">
+            <a href="#" class="items o_link" id="more">More</a>
+          </li>
+          <img id="plus" class="plus_sign" src="./src/images/plus.svg" />
+
+          <div class="more_overlay_menu">
+            <div class="more_overlay_content">
+              <h1 class="more_title">More on Ableton.com:</h1>
+              <ul class="more_list_item">
+                <li class="more_item"><a href="#">Blog</a></li>
+                <li class="more_item">
+                  <a href="#">Ableton for the Classroom</a>
+                </li>
+                <li class="more_item"><a href="#">Blog</a></li>
+                <li class="more_item">
+                  <a href="#">Ableton for Colleges and Universities</a>
+                </li>
+                <li class="more_item"><a href="#">Certified Training</a></li>
+                <li class="more_item">
+                  <a href="#" style="color: #ff764d">About Ableton</a>
+                </li>
+                <li class="more_item"><a href="#">Jobs</a></li>
+                <li class="more_item"><a href="#">Apprenticeships</a></li>
+              </ul>
+            </div>
+            <div class="more_overlay_wrapper">
+              <h1 class="more_title">More from Ableton:</h1>
+              <div class="wrapper_overlay">
+                <div class="text_box_overlay">
+                  <h3 class="text_box_label">Loop</h3>
+                  <p class="text_box_sublabel">
+                    Watch Talks, Performances and Features from Ableton's Summit
+                    for Music Makers.
+                  </p>
+                </div>
+                <div class="text_box_overlay">
+                  <h3 class="text_box_label">Learning Music</h3>
+                  <p class="text_box_sublabel">
+                    Learn the fundamentals of Music making right in your
+                    browser.
+                  </p>
+                </div>
+                <div class="text_box_overlay">
+                  <h3 class="text_box_label">Learning Synths</h3>
+                  <p class="text_box_sublabel">
+                    Get started with synthesis using a web-based synth and
+                    accompanying lessons.
+                  </p>
+                </div>
+                <div class="text_box_overlay">
+                  <h3 class="text_box_label">Making Music</h3>
+                  <p class="text_box_sublabel">
+                    Some tips from 74 Creative Strategies for Electronic
+                    Producers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ul>
+      <ul class="header_list">
+        <li class="list_items">
+          <a href="#" class="items b_link">Try Live 12 for free</a>
+        </li>
+        <li class="list_items">
+          <a href="#" class="items login_signup">Log in or register</a>
+        </li>
+      </ul>
+    </header>
+    <!-- Breadcrumb navigation-->
+    <header class="Breadcrumb_nav">
+      <ul class="header_list_bread">
+        <li class="list_items_bread">
+          <a href="#" class="bread_item"><span class="o_link">About</span></a>
+        </li>
+        <li class="list_items_bread">
+          <a href="#" class="bread_item">Jobs</a>
+        </li>
+        <li class="list_items_bread">
+          <a href="#" class="bread_item">Apprenticeships</a>
+        </li>
+      </ul>
+    </header>
+    <section class="hero_section">
+      <h1 class="hero_title">Ableton</h1>
+    </section>
+    <!--CS section-->
+    <section class="content_section">
+      <div class="titles">
+        <h1 class="main_heading">
+          We make <span class="b_link">Live</span>,
+          <span class="b_link">Push</span>, <span class="b_link">Note</span> and
+          <span class="b_link">Link</span> — unique software and hardware for
+          music creation and performance. With these products, our community of
+          users creates amazing things.
+        </h1>
+        <p class="main_subtitle">
+          Ableton was founded in 1999 and released the first version of Live in
+          2001. Our products are used by a community of dedicated musicians,
+          sound designers, and artists from across the world.
+        </p>
+      </div>
+    </section>
+    <section class="images_section_yellow">
+      <div class="images">
+        <img class="image_1" src="./src/images/photo-1.jpg" />
+        <img class="image_2" src="./src/images/photo-2.jpg" />
+      </div>
+      <div class="yellow_bg"></div>
+    </section>
+    <!--CS section-->
+    <section class="content_section">
+      <div class="titles">
+        <h1 class="main_heading">
+          Making music isn’t easy. It takes time, effort, and learning. But when
+          you’re in the flow, it’s incredibly rewarding.
+        </h1>
+        <p class="main_subtitle">
+          We feel the same way about making Ableton products. The driving force
+          behind Ableton is our passion for what we make, and the people we make
+          it for.
+        </p>
+      </div>
+    </section>
+    <section class="video_section">
+      <div class="video_overlay">
+        <div class="play_icon">
+          <svg
+            id="play_icon"
+            viewBox="0 0 512 512"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            enable-background="new 0 0 512 512"
+          >
+            <path
+              d="M405.2 232.9 126.8 67.2c-3.4-2-6.9-3.2-10.9-3.2-10.9 0-19.8 9-19.8 20H96v344h.1c0 11 8.9 20 19.8 20 4.1 0 7.5-1.4 11.2-3.4l278.1-165.5c6.6-5.5 10.8-13.8 10.8-23.1s-4.2-17.5-10.8-23.1z"
+              fill="#ffffff"
+              class="fill-000000"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <iframe
+        id="video"
+        class="video"
+        src="https://www.youtube.com/embed/9SbnhgjeyXA?si=YXixy741WaUttIh6"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <p class="video_info">Why Ableton - Juanpe Bolivar</p>
+    </section>
+    <!--CS section-->
+
+    <section class="content_section">
+      <div class="titles">
+        <h1 class="main_heading">
+          We are more than 350 people from 30 different countries divided
+          between our headquarters in Berlin and our offices in Los Angeles and
+          Tokyo.
+        </h1>
+        <p class="main_subtitle">
+          Most of us are active musicians, producers, and DJs, and many of us
+          use Live and Push every day. We come from a wide range of cultural and
+          professional backgrounds. Some of us have PhDs, some are self-taught,
+          and most of us are somewhere in between. What connects us is the
+          shared belief that each of us has the skills and knowledge to
+          contribute to something big: helping to shape the future of music
+          culture.
+        </p>
+      </div>
+    </section>
+    <section class="images_section_green">
+      <div class="images_flex">
+        <div class="first_col">
+          <img class="image_3" src="./src/images/photo-3.jpg" />
+          <img class="image_4" src="./src/images/photo-4.jpg" />
+        </div>
+        <div class="sec_col">
+          <img class="image_5" src="./src/images/photo-5.jpg" />
+        </div>
+      </div>
+      <div class="green_bg"></div>
+    </section>
+    <!--CS section-->
+
+    <section class="content_section">
+      <div class="titles">
+        <h1 class="main_heading">
+          We believe it takes focus to create truly outstanding instruments. We
+          only work on a few products and we strive to make them great.
+        </h1>
+        <p class="main_subtitle">
+          Rather than having a one-size-fits-all process, we try to give our
+          people what they need to work their magic and grow. We’ve learned that
+          achieving the best results comes from building teams that are richly
+          diverse, and thus able to explore problems from a wider set of
+          perspectives. We don’t always agree with each other, but opinion and
+          debate are valued and openly encouraged.
+        </p>
+      </div>
+    </section>
+    <section class="hero_section_i"></section>
+    <section class="content_section">
+      <div class="titles">
+        <h1 class="main_heading">
+          We’re passionate about what we do, but we’re equally passionate about
+          improving who we are.
+        </h1>
+        <p class="main_subtitle">
+          We work hard to foster an environment where people can grow both
+          personally and professionally, and we strive to create a wealth of
+          opportunities to learn from and with each other. <br />
+          <br />
+          Alongside an internal training program, employees are actively
+          supported in acquiring new knowledge and skills, and coached on
+          applying these in their daily work. In addition, staff-organized
+          development and music salons are a chance to discuss new technologies,
+          production techniques and best practices.
+        </p>
+      </div>
+    </section>
+    <section class="images_section_purple">
+      <div class="images_2">
+        <img class="image_6" src="./src/images/photo-6-a.jpg" />
+        <img class="image_7" src="./src/images/photo-7 -a.jpg" />
+      </div>
+      <div class="purple_bg"></div>
+    </section>
+    <!--CS section-->
+
+    <section class="content_section">
+      <div class="titles">
+        <h1 class="main_heading">
+          We want our employees to love it here. Since we’re looking for
+          exceptional talent from around the world, we will do everything we can
+          to make your transition as easy as possible.
+        </h1>
+        <p class="main_subtitle">
+          If you're joining us in Berlin, we'll help with relocation and
+          paperwork. We’ll even provide you with free German or English lessons.
+          Plus, working in Germany means you can expect comprehensive health
+          insurance for you and your family, as well as generous maternity and
+          paternity leave. Office hours are flexible, but it’s not all work; we
+          have several company and team outings throughout the year as well as a
+          variety of fun, informal small-group activities.
+        </p>
+      </div>
+    </section>
+    <!--Join section-->
+    <section class="joining_section">
+      <div class="col_items">
+        <div class="pic_side"></div>
+        <div class="content_side">
+          <h1 class="join_title">
+            We’re really proud of the work we’ve done so far. But there’s so
+            much more to come. If you’d like to be a part of it, please join us.
+          </h1>
+          <a href="about.html" class="cta-btn">
+            <span class="btn">See latest jobs</span>
+            <svg
+              class="arrow"
+              viewBox="0 0 32 32"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                fill="#0000ff"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer_content">
+        <div class="site_logo_footer">
+          <h1 class="footer_logo">Ableton</h1>
+        </div>
+
+        <div class="footer_cols">
+          <div class="row_section">
+            <div class="col_1">
+              <ul class="info_list">
+                <li class="footer_list">
+                  <a href="#">Register Live or Push</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+                <li class="footer_list">
+                  <a href="#">About Ableton</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+                <li class="footer_list">
+                  <a href="#">Jobs</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+              </ul>
+              <div class="social_icons">
+                <a href="#"
+                  ><img class="icon" src="./src/images/facebook.png"
+                /></a>
+                <a href="#"
+                  ><img class="icon" src="./src/images/twitter.png"
+                /></a>
+                <a href="#"
+                  ><img class="icon" src="./src/images/youtube.png"
+                /></a>
+                <a href="#"
+                  ><img class="icon" src="./src/images/instagram.png"
+                /></a>
+                <a href="#">
+                  <img class="icon" src="./src/images/tic-tac.png" />
+                </a>
+              </div>
+            </div>
+            <div class="col_2">
+              <h2 class="footer_label">Education</h2>
+              <ul class="info_list">
+                <li class="footer_list">
+                  <a href="#">Offers for students and teachers</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+                <li class="footer_list">
+                  <a href="#">Ableton for the Classroom</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+                <li class="footer_list">
+                  <a href="#">Ableton for Colleges and Universities</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="col_3">
+              <h2 class="footer_label">Sign up to our newsletter</h2>
+              <p class="form_content">
+                Enter your email address to stay up to date with the latest
+                offers, tutorials, downloads, surveys and more.
+              </p>
+              <form action="#">
+                <input type="email" placeholder="Email Address" />
+                <button class="form_btn" type="submit">Sign up</button>
+              </form>
+            </div>
+            <div class="col_4">
+              <h2 class="footer_label">Community</h2>
+              <ul class="info_list">
+                <li class="footer_list">
+                  <a href="#">Find Ableton User Groups</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+                <li class="footer_list">
+                  <a href="#">Find Certified Training</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+                <li class="footer_list">
+                  <a href="#">Become a Certified Trainer</a>
+                  <svg
+                    class="footer_list_arrow"
+                    viewBox="0 0 32 32"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="m21.698 15.286-9.002-8.999a1.014 1.014 0 0 0-1.431 0 1.009 1.009 0 0 0 0 1.428L19.553 16l-8.287 8.285a1.01 1.01 0 0 0 0 1.429 1.014 1.014 0 0 0 1.431 0l9.002-8.999a1.02 1.02 0 0 0-.001-1.429z"
+                      fill="#000000"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="col_5">
+              <h2 class="footer_label">Language and Location</h2>
+              <div class="option_row">
+                <select class="languages" value="Language">
+                  <option value="en">English</option>
+                  <option value="de">Deutsch</option>
+                  <option value="fr">Francais</option>
+                  <option value="ja">日本語</option>
+                  <option value="ch">中文</option>
+                  <option value="es">Español</option>
+                </select>
+                <select class="countries" value="country">
+                  <option>Please Choose</option>
+                  <optgroup label="Common countries">
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                    <option>Canada</option>
+                    <option>Japan</option>
+                    <option>China</option>
+                    <option>Australia</option>
+                  </optgroup>
+                  <optgroup label="All Countries/ Regions">
+                    <option>Afghanistan</option>
+                    <option>Albania</option>
+                    <option>Algeria</option>
+                    <option>Andorra</option>
+                    <option>Angola</option>
+                    <option>Antigua and Barbuda</option>
+                    <option>Argentina</option>
+                    <option>Armenia</option>
+                    <option>Australia</option>
+                    <option>Austria</option>
+                    <option>Azerbaijan</option>
+                    <option>Bahamas</option>
+                    <option>Bahrain</option>
+                    <option>Bangladesh</option>
+                    <option>Barbados</option>
+                    <option>Belarus</option>
+                    <option>Belgium</option>
+                    <option>Belize</option>
+                    <option>Benin</option>
+                    <option>Bhutan</option>
+                    <option>Bolivia</option>
+                    <option>Bosnia and Herzegovina</option>
+                    <option>Botswana</option>
+                    <option>Brazil</option>
+                    <option>Brunei</option>
+                    <option>Bulgaria</option>
+                    <option>Burkina Faso</option>
+                    <option>Burundi</option>
+                    <option>Cambodia</option>
+                    <option>Cameroon</option>
+                    <option>Canada</option>
+                    <option>Cape Verde</option>
+                    <option>Central African Republic</option>
+                    <option>Chad</option>
+                    <option>Chile</option>
+                    <option>China</option>
+                    <option>Colombia</option>
+                    <option>Comoros</option>
+                    <option>Congo</option>
+                    <option>Costa Rica</option>
+                    <option>Croatia</option>
+                    <option>Cuba</option>
+                    <option>Cyprus</option>
+                    <option>Czech Republic</option>
+                    <option>Denmark</option>
+                    <option>Djibouti</option>
+                    <option>Dominica</option>
+                    <option>Dominican Republic</option>
+                    <option>Ecuador</option>
+                    <option>Egypt</option>
+                    <option>El Salvador</option>
+                    <option>Equatorial Guinea</option>
+                    <option>Eritrea</option>
+                    <option>Estonia</option>
+                    <option>Eswatini</option>
+                    <option>Ethiopia</option>
+                    <option>Fiji</option>
+                    <option>Finland</option>
+                    <option>France</option>
+                    <option>Gabon</option>
+                    <option>Gambia</option>
+                    <option>Georgia</option>
+                    <option>Germany</option>
+                    <option>Ghana</option>
+                    <option>Greece</option>
+                    <option>Grenada</option>
+                    <option>Guatemala</option>
+                    <option>Guinea</option>
+                    <option>Guinea-Bissau</option>
+                    <option>Guyana</option>
+                    <option>Haiti</option>
+                    <option>Honduras</option>
+                    <option>Hungary</option>
+                    <option>Iceland</option>
+                    <option>India</option>
+                    <option>Indonesia</option>
+                    <option>Iran</option>
+                    <option>Iraq</option>
+                    <option>Ireland</option>
+                    <option>Israel</option>
+                    <option>Italy</option>
+                    <option>Jamaica</option>
+                    <option>Japan</option>
+                    <option>Jordan</option>
+                    <option>Kazakhstan</option>
+                    <option>Kenya</option>
+                    <option>Kiribati</option>
+                    <option>Kuwait</option>
+                    <option>Kyrgyzstan</option>
+                    <option>Laos</option>
+                    <option>Latvia</option>
+                    <option>Lebanon</option>
+                    <option>Lesotho</option>
+                    <option>Liberia</option>
+                    <option>Libya</option>
+                    <option>Liechtenstein</option>
+                    <option>Lithuania</option>
+                    <option>Luxembourg</option>
+                    <option>Madagascar</option>
+                    <option>Malawi</option>
+                    <option>Malaysia</option>
+                    <option>Maldives</option>
+                    <option>Mali</option>
+                    <option>Malta</option>
+                    <option>Marshall Islands</option>
+                    <option>Mauritania</option>
+                    <option>Mauritius</option>
+                    <option>Mexico</option>
+                    <option>Micronesia</option>
+                    <option>Moldova</option>
+                    <option>Monaco</option>
+                    <option>Mongolia</option>
+                    <option>Montenegro</option>
+                    <option>Morocco</option>
+                    <option>Mozambique</option>
+                    <option>Myanmar</option>
+                    <option>Namibia</option>
+                    <option>Nauru</option>
+                    <option>Nepal</option>
+                    <option>Netherlands</option>
+                    <option>New Zealand</option>
+                    <option>Nicaragua</option>
+                    <option>Niger</option>
+                    <option>Nigeria</option>
+                    <option>North Korea</option>
+                    <option>North Macedonia</option>
+                    <option>Norway</option>
+                    <option>Oman</option>
+                    <option>Pakistan</option>
+                    <option>Palau</option>
+                    <option>Panama</option>
+                    <option>Papua New Guinea</option>
+                    <option>Paraguay</option>
+                    <option>Peru</option>
+                    <option>Philippines</option>
+                    <option>Poland</option>
+                    <option>Portugal</option>
+                    <option>Qatar</option>
+                    <option>Romania</option>
+                    <option>Russia</option>
+                    <option>Rwanda</option>
+                    <option>Saint Kitts and Nevis</option>
+                    <option>Saint Lucia</option>
+                    <option>Saint Vincent and the Grenadines</option>
+                    <option>Samoa</option>
+                    <option>San Marino</option>
+                    <option>Sao Tome and Principe</option>
+                    <option>Saudi Arabia</option>
+                    <option>Senegal</option>
+                    <option>Serbia</option>
+                    <option>Seychelles</option>
+                    <option>Sierra Leone</option>
+                    <option>Singapore</option>
+                    <option>Slovakia</option>
+                    <option>Slovenia</option>
+                    <option>Solomon Islands</option>
+                    <option>Somalia</option>
+                    <option>South Africa</option>
+                    <option>South Korea</option>
+                    <option>South Sudan</option>
+                    <option>Spain</option>
+                    <option>Sri Lanka</option>
+                    <option>Sudan</option>
+                    <option>Suriname</option>
+                    <option>Sweden</option>
+                    <option>Switzerland</option>
+                    <option>Syria</option>
+                    <option>Taiwan</option>
+                    <option>Tajikistan</option>
+                    <option>Tanzania</option>
+                    <option>Thailand</option>
+                    <option>Timor-Leste</option>
+                    <option>Togo</option>
+                    <option>Tonga</option>
+                    <option>Trinidad and Tobago</option>
+                    <option>Tunisia</option>
+                    <option>Turkey</option>
+                    <option>Turkmenistan</option>
+                    <option>Tuvalu</option>
+                    <option>Uganda</option>
+                    <option>Ukraine</option>
+                    <option>United Arab Emirates</option>
+                    <option>United Kingdom</option>
+                    <option>United States</option>
+                    <option>Uruguay</option>
+                    <option>Uzbekistan</option>
+                    <option>Vanuatu</option>
+                    <option>Vatican City</option>
+                    <option>Venezuela</option>
+                    <option>Vietnam</option>
+                    <option>Yemen</option>
+                    <option>Zambia</option>
+                    <option>Zimbabwe</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer_pages">
+          <ul class="pages">
+            <li class="footer_page">
+              <a href="#">Contact</a>
+            </li>
+            <li class="footer_page">
+              <a href="#">Press Resources</a>
+            </li>
+            <li class="footer_page">
+              <a href="#">Legal info</a>
+            </li>
+            <li class="footer_page">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="footer_page">
+              <a href="#">Cookie Setting</a>
+            </li>
+            <li class="footer_page">
+              <a href="#">Imprint</a>
+            </li>
+          </ul>
+          <div class="footer_author">
+            <h3 class="author">Made in Berlin</h3>
+            <svg
+              onclick="addAction()"
+              role="img"
+              aria-label="Logo Ableton"
+              class="footer_logo_sm"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              width="45"
+              height="21"
+              viewBox="0 0 45 21"
+            >
+              <path
+                d="M0 0h3v21H0zM6 0h3v21H6zM12
+    0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
