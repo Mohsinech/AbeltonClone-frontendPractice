@@ -24,8 +24,8 @@ This project demonstrates the creation of a responsive "About Us" page for the A
 ## Usage Instructions
 
 1. Open the project folder in VSCode.
-2. Open the `about.html` file.
-3. Right-click on the `about.html` file and select "Open with Live Server" to launch the project in your default web browser.
+2. Open the `index.html` file.
+3. Right-click on the `index.html` file and select "Open with Live Server" to launch the project in your default web browser.
 
 ## Features
 
