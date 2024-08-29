@@ -52,7 +52,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Preview
 
-Check out the live preview of the project here: [Ableton About Us Page](https://mohsinech.github.io/AbeltonClone-frontendPractice/)
+Check out the live preview of the project here: [Ableton About Us Page](https://mohsinech.github.io/Ableton-clone-frontendPractice/)
 
 ## Contact
 
